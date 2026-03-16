@@ -17,14 +17,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'venv\\Scripts\\pip install --upgrade pip'
                 bat 'venv\\Scripts\\pip install -r requirements.txt'
-            }
-        }
-
-        stage('Start Selenium Grid') {
-            steps {
-                bat 'docker compose up -d'
             }
         }
 
@@ -34,10 +27,5 @@ pipeline {
             }
         }
 
-        stage('Stop Containers') {
-            steps {
-                bat 'docker compose down'
-            }
-        }
     }
 }
