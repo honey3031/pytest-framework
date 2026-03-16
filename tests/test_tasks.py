@@ -1,7 +1,6 @@
 from pages.login_page import LoginPage
 from pages.tasks_page import TasksPage
 
-
 def test_task_status_update(driver):
 
     login_page = LoginPage(driver)
@@ -15,5 +14,7 @@ def test_task_status_update(driver):
     tasks_page.mark_task_done()
 
     driver.refresh()
+
+    tasks_page = TasksPage(driver)   # reinitialize page
 
     assert tasks_page.status_is_done()
