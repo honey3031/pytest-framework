@@ -1,11 +1,18 @@
+# Virtual Environment
 venv/
-logs/
-reports/
+
+# Python Cache
 __pycache__/
+*.pyc
+
+# Pytest Cache
+.pytest_cache/
+
+# Logs
+logs/
 *.log
 
-*.pyc
+# Test Reports
 reports/
 allure-results/
 allure-report/
-venv/
